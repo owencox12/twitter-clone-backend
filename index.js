@@ -88,7 +88,7 @@ app.get('/follow/:id/', checkAuth, followsControllers.follow)
 app.delete('/follow/:id/delete', checkAuth, followsControllers.unFollow)
 app.get('/follow/:id/new', checkAuth, followsControllers.getFollowPosts)
 
-app.listen(4444, err => {
+app.listen(process.env.PORT || 4444, err => {
 	if (err) {
 		console.log(err)
 	}
