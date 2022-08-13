@@ -11,6 +11,7 @@ import { postsValidation, registerValidation } from './validation.js'
 import handleValid from './handleValid.js'
 import multer from 'multer'
 import checkAuth from './checkAuth.js'
+import fs from 'fs'
 
 const app = express()
 app.use(express.json())
@@ -23,6 +24,9 @@ mongoose
 
 const storage = multer.diskStorage({
 	destination: (_, __, cb) => {
+		if (!fs.exsistSync('uploads')) {
+			fs.mkdirSync('uploads')
+		}
 		cb(null, 'uploads')
 	},
 	filename: (_, file, cb) => {
