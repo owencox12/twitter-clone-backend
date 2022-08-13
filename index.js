@@ -24,7 +24,7 @@ mongoose
 
 const storage = multer.diskStorage({
 	destination: (_, __, cb) => {
-		if (!fs.exsistSync('uploads')) {
+		if (!fs.existsSync('uploads')) {
 			fs.mkdirSync('uploads')
 		}
 		cb(null, 'uploads')
