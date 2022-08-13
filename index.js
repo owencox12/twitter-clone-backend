@@ -47,6 +47,10 @@ app.post(
 	PostControllers.createPost
 )
 
+// павпв ап вап ва павпвgg dfg dfg df gdf dfg dfпв апвап вап
+//  вапвап ва пва пваg fgd fgdfdfg d пв вап вв пва пп ва пв
+//   авпва п вап ваggfd gdf gd  dfgdf вап вап вап вап вап
+
 //posts
 app.get('/posts', checkAuth, PostControllers.getAll)
 app.get('/posts/:id', checkAuth, PostControllers.getOne)
